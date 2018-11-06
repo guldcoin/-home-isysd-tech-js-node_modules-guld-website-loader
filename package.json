@@ -1,0 +1,38 @@
+{
+  "name": "guld-website-loader",
+  "readme": "README.md",
+  "author": "isysd",
+  "license": "MIT",
+  "description": "guld-website-loader by isysd",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=7"
+  },
+  "scripts": {
+    "test": "mocha test/*.js",
+    "lint": "eslint *.js* test/*.js",
+    "fix": "eslint --fix *.js* test/*.js",
+    "test:lint": "npm run lint && npm run test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "eslint": "^4.1.2",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-json": "^1.2.1",
+    "pre-commit": "^1.2.2"
+  },
+  "homepage": "https://guld.tech/lib/guld-website-loader.html",
+  "repository": "https://bitbucket.org/isysd/tech-js-node_modules-guld-website-loader",
+  "keywords": [
+    "guld"
+  ],
+  "pre-commit": [
+    "test:lint"
+  ]
+}
