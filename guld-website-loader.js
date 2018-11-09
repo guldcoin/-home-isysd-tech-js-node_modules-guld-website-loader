@@ -72,7 +72,7 @@ window.loadFromSitemap = function () {
       if (lines[l].endsWith('.js')) loadScript(lines[l])
       else if (lines[l].endsWith('.css')) loadCSS(lines[l])
       else if (lines[l].match(/\/Documents\/.*html\/components\/.*\.html/)) await loadDocument(lines[l])
-      else if (lines[l] === `//${window.location.host}${window.location.pathname}`) {
+      else if (lines[l] === `${window.location.pathname}`) {
         next = lines[Number(l)+1]
         break
       }
