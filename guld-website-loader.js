@@ -68,6 +68,7 @@ window.loadFromSitemap = function () {
     let lines = sitemap.split('\n')
     let next
     for (var l in lines) {
+      if (lines[l] === undefined || lines[l].length === 0) continue
       lines[l] = lines[l].replace(new RegExp(`(http\:|https\:)*//${window.location.host}`), '')
       if (lines[l].endsWith('.js')) loadScript(lines[l])
       else if (lines[l].endsWith('.css')) loadCSS(lines[l])
